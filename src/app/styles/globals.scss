@@ -1,5 +1,6 @@
 @use "./variables.scss" as variables;
 
 body{
-  background-color: variables.$background;
+  background-color: variables.$color-background;
+  position: absolute;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./styles/globals.scss";
 
 import { Roboto_Mono } from 'next/font/google'
+import Navigation from "@/common/componenets/navigation/navigation";
  
 
  
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto_mono}`}>
+        <Navigation></Navigation>
         {children}
       </body>
     </html>
