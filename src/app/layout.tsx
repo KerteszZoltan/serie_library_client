@@ -3,6 +3,7 @@ import "./styles/globals.scss";
 
 import { Roboto_Mono } from 'next/font/google'
 import Navigation from "@/common/componenets/navigation/navigation";
+import Footer from "@/common/componenets/footer/footer";
  
 
  
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${roboto_mono}`}>
         <Navigation></Navigation>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );
