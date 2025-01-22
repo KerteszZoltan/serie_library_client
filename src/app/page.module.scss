@@ -10,82 +10,96 @@
     overflow: scroll;
     
     &_background{
+        height: 45%;
         position: relative;
-        height: max-content;
-        padding-top: 10%;
-        padding-bottom: 10%;
         background-image: url("/moovie.png");
         background-size: 100% 200%;
         background-repeat: no-repeat;
         background-position: center;
         width: 100vw;
         left: -5vw;
-        place-content: center;
+        align-content: center;
 
         &_container{
             align-items: center;
-            width: 80vw;
+            width: 70vw;
             position: relative;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
             position: relative;
             justify-items: center;
             justify-self: center;
+            height: 80%;
+            overflow: scroll;
+
+
+            &_span_container{
+                place-content: center;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+
+                & > span{
+                    justify-self: right;
+                    padding: 1%;
+                }
+        
+                & > span:nth-child(2n){
+                    justify-self: left;
+                }
+
+            }
     
         }
 
-        &_container > span{
-            justify-self: right;
-            padding: 1%;
-        }
-
-        &_container > span:nth-child(2n){
-            justify-self: left;
-        }
     }
 }
-
-$extra_height:20%;
 
 @media (max-width:600px){ 
     .page{
         position: relative;
-        left: 4vw;
-        width: 90vw;
+        width: 100vw;
         height: 80vh;
         display: flex;
         flex-direction: column;
         overflow: scroll;
-        overflow-x: hidden;
         
         &_background{
+            height: 30%;
             position: relative;
-            padding-top: 20%;
-            padding-bottom: 20%;
             background-image: url("/moovie.png");
             background-size: 100% 200%;
             background-repeat: no-repeat;
             background-position: center;
             width: 100vw;
-            left: -5vw;
-            height: (fit-content + #{$extra_height});
-            place-content: center;
+            align-content: center;
     
             &_container{
                 align-items: center;
-                width: 80vw;
+                width: 70vw;
                 position: relative;
-                display: flex;
-                flex-direction: column;
-                grid-template-columns: repeat(4,1fr);
                 position: relative;
                 justify-items: center;
                 justify-self: center;
+                height: 80%;
+                overflow: scroll;
+    
+    
+                &_span_container{
+                    place-content: center;
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+    
+                    & > span{
+                        justify-self: right;
+                        padding: 1%;
+                    }
+            
+                    & > span:nth-child(2n){
+                        justify-self: left;
+                    }
+    
+                }
         
             }
-            &_container > span{
-                padding: 1%;
-            }
+    
         }
     }
     
