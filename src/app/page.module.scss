@@ -1,6 +1,92 @@
 @use "./styles/variables.scss" as variables;
 
 .page{
-    width: 90vw;
+    position: relative;
+    left: 4vw;
+    width: 100vw;
     height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    
+    &_background{
+        position: relative;
+        height: max-content;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        background-image: url("/moovie.png");
+        background-size: 100% 200%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100vw;
+        left: -5vw;
+        place-content: center;
+
+        &_container{
+            align-items: center;
+            width: 80vw;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            position: relative;
+            justify-items: center;
+            justify-self: center;
+    
+        }
+
+        &_container > span{
+            justify-self: right;
+            padding: 1%;
+        }
+
+        &_container > span:nth-child(2n){
+            justify-self: left;
+        }
+    }
+}
+
+$extra_height:20%;
+
+@media (max-width:600px){ 
+    .page{
+        position: relative;
+        left: 4vw;
+        width: 90vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        overflow-x: hidden;
+        
+        &_background{
+            position: relative;
+            padding-top: 20%;
+            padding-bottom: 20%;
+            background-image: url("/moovie.png");
+            background-size: 100% 200%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100vw;
+            left: -5vw;
+            height: (fit-content + #{$extra_height});
+            place-content: center;
+    
+            &_container{
+                align-items: center;
+                width: 80vw;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                grid-template-columns: repeat(4,1fr);
+                position: relative;
+                justify-items: center;
+                justify-self: center;
+        
+            }
+            &_container > span{
+                padding: 1%;
+            }
+        }
+    }
+    
 }

@@ -9,7 +9,7 @@ import Footer from "@/common/componenets/footer/footer";
  
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
 })
 
 export const metadata: Metadata = {

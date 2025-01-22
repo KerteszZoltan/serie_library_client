@@ -3,4 +3,6 @@
 body{
   background-color: variables.$color-background;
   position: absolute;
+  color: variables.$color-text;
+  overflow-x: hidden;
 }
