@@ -14,9 +14,11 @@
     .page{
         position: relative;
         width: 100vw;
-        height: 80vh;
+        height: 85vh;
         display: flex;
         flex-direction: column;
         overflow: scroll;
+        left: 4vw;
+
     }
 }
