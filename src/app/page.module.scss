@@ -8,48 +8,6 @@
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    
-    &_background{
-        height: 45%;
-        position: relative;
-        background-image: url("/moovie.png");
-        background-size: 100% 200%;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100vw;
-        left: -5vw;
-        align-content: center;
-
-        &_container{
-            align-items: center;
-            width: 70vw;
-            position: relative;
-            position: relative;
-            justify-items: center;
-            justify-self: center;
-            height: 80%;
-            overflow: scroll;
-
-
-            &_span_container{
-                place-content: center;
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-
-                & > span{
-                    justify-self: right;
-                    padding: 1%;
-                }
-        
-                & > span:nth-child(2n){
-                    justify-self: left;
-                }
-
-            }
-    
-        }
-
-    }
 }
 
 @media (max-width:600px){ 
@@ -60,47 +18,5 @@
         display: flex;
         flex-direction: column;
         overflow: scroll;
-        
-        &_background{
-            height: 30%;
-            position: relative;
-            background-image: url("/moovie.png");
-            background-size: 100% 200%;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 100vw;
-            align-content: center;
-    
-            &_container{
-                align-items: center;
-                width: 70vw;
-                position: relative;
-                position: relative;
-                justify-items: center;
-                justify-self: center;
-                height: 80%;
-                overflow: scroll;
-    
-    
-                &_span_container{
-                    place-content: center;
-                    display: grid;
-                    grid-template-columns: repeat(2,1fr);
-    
-                    & > span{
-                        justify-self: right;
-                        padding: 1%;
-                    }
-            
-                    & > span:nth-child(2n){
-                        justify-self: left;
-                    }
-    
-                }
-        
-            }
-    
-        }
     }
-    
 }
