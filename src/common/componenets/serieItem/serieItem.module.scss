@@ -6,11 +6,10 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100vw;
-    left: -5vw;
     align-content: center;
 
     &_container{
-        align-items: center;
+        align-content: center;
         width: 70vw;
         position: relative;
         position: relative;
@@ -24,6 +23,7 @@
             place-content: center;
             display: grid;
             grid-template-columns: repeat(2,1fr);
+            width: 70vw;
 
             & > span{
                 justify-self: right;

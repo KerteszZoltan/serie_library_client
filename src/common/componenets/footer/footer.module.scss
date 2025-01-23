@@ -3,7 +3,6 @@
 .footer_container{
     width: 100vw;
     height: 10vh;
-    left: -0.5vw;
     justify-content: center;
     position: relative;
     display: flex;
@@ -12,12 +11,19 @@
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(43,64,54,1) 56%, rgba(52,78,65,1) 100%);
 
+    border-left: 1px solid #344E41;
+    border-right: 1px solid #344E41;
+    border-top: 1px solid #344E41;
+    border-radius: 20px 20px 0px 0px;
+
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(58,90,64,0.81); 
+    box-shadow: 0px 0px 12px 1px rgba(58,90,64,0.81);
+
     &_icon_container{
         display: flex;
         flex-direction: row;
         width: 30vw;
         justify-content: space-between;
-        //padding: 2vh;
         &_icon{
             background-color: black;
         }
@@ -30,14 +36,14 @@
 
 @media (max-width:600px){ 
     .footer_container{
-        width: 101vw;
+        width: 100vw;
         height: 10vh;
-        left: -2vw;
         justify-content: center;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(43,64,54,1) 56%, rgba(52,78,65,1) 100%);
     
@@ -46,7 +52,6 @@
             flex-direction: row;
             width: 30vw;
             justify-content: space-between;
-            //padding: 2vh;
             &_icon{
                 background-color: black;
             }
