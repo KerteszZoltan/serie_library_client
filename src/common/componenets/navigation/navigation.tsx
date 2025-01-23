@@ -2,11 +2,14 @@ import styles from "./navigation.module.scss";
 
 export default function Navigation(){
     return (
-        <div className={`${styles.nav_container}`}>
-            <div className={`${styles.nav_container_item}`}>Add series</div>
-            <div className={`${styles.nav_container_item}`}>Series</div>
-            <div className={`${styles.nav_container_item}`}>Login</div>
-            <div className={`${styles.nav_container_item}`}>Registration</div>
+        <div className={`${styles.nav}`}>
+            <div className={`${styles.nav_container}`}>
+                <div>Add series</div>
+                <div>Series</div>
+                <div>Login</div>
+                <div>Registration</div>
+            </div>
         </div>
+
     );
 }

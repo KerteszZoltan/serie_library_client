@@ -5,7 +5,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <SerieItem></SerieItem>
-      
+      <SerieItem></SerieItem>
+
+      <SerieItem></SerieItem>
+
+      <SerieItem></SerieItem>
+
+      <SerieItem></SerieItem>
+
     </div>
   );
 }
