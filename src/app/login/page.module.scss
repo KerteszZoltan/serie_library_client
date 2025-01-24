@@ -7,6 +7,10 @@
     overflow: scroll;
     margin: 0;
     justify-content: center;
+    background-image: url("/film_roll.png");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: center;
 
     &_background{
         position: absolute;
@@ -14,19 +18,20 @@
         background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center;
-        width: 80%;
-        left: 10%;
+        width: 60%;
+        left: 20%;
         height: 90%;
+        opacity: .8;
     }
 
 
     &_border{
         position: relative;
-        width: 76%;
+        width: 57%;
         //align-self: center;
         //align-content: center;
-        left:12.4%;
-        height: 53%;
+        left:21.8%;
+        height: 52%;
         top:17%;
         border: 1px solid #3A5A40;
         border-radius: 20px;
