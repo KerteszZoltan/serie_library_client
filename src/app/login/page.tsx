@@ -9,9 +9,9 @@ export default function LoginPage(){
                 <div className={styles.page_border_grid}>
                     <span className={styles.page_border_grid_title}>Serie Library</span>
                     <span className={styles.page_border_grid_img}></span>
-                    <span className={styles.items}>Email</span>
+                    <span className={styles.items}>Email:</span>
                     <span>...email...</span>
-                    <span>Passwork</span>
+                    <span>Password:</span>
                     <span>...password...</span>
                     <span className={styles.page_border_grid_btn}>BTN_LOGIN</span>
                     <span className={styles.page_border_grid_line}>------------</span>
