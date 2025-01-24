@@ -1,4 +1,5 @@
 import styles from "./navigation.module.scss";
+import Link from 'next/link';
 
 export default function Navigation(){
     return (
@@ -6,7 +7,9 @@ export default function Navigation(){
             <div className={`${styles.nav_container}`}>
                 <div>Add series</div>
                 <div>Series</div>
-                <div>Login</div>
+                <Link href="/login">
+                    Login
+                </Link>
                 <div>Registration</div>
             </div>
         </div>

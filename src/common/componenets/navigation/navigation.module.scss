@@ -1,8 +1,6 @@
-@use "../../../app/styles/variables.scss" as variables;
-
 .nav{
     margin: 0;
-    width: 100vw;
+    width: calc(100vw - 2px);
     height: 5vh;
     position: relative;
     background: rgb(0,0,0);
@@ -29,7 +27,7 @@
 
 @media (max-width:600px){ 
     .nav{
-        width: 100vw;
+        width: calc(100vw - 2px);
         height: 5vh;
         position: relative;
         background: rgb(0,0,0);
