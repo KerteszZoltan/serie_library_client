@@ -1,0 +1,9 @@
+@use "./variables.scss" as variables;
+
+%border{
+    border-top: 1px solid variables.$color-background;
+    border-left: 1px solid variables.$color-background;
+    border-right: 1px solid variables.$color-background;
+    border-bottom: 1px solid variables.$color-background;
+}
+

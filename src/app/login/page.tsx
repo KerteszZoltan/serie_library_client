@@ -1,4 +1,6 @@
+import PageButton from "@/common/componenets/buttons/page/button";
 import styles from "./page.module.scss";
+import { faCirclePlay, faHeadphones } from "@fortawesome/free-solid-svg-icons"
 
 export default function LoginPage(){
 
@@ -13,9 +15,13 @@ export default function LoginPage(){
                     <span>...email...</span>
                     <span>Password:</span>
                     <span>...password...</span>
-                    <span className={styles.page_border_grid_btn}>BTN_LOGIN</span>
-                    <span className={styles.page_border_grid_line}>------------</span>
-                    <span className={styles.page_border_grid_btn}>BTN_REGISTRATION</span>
+                    <span className={styles.page_border_grid_btn}>
+                        <PageButton label={"Login"} icon={faCirclePlay} ></PageButton>
+                    </span>
+                    <span className={styles.page_border_grid_line}>-------or-----</span>
+                    <span className={styles.page_border_grid_btn}>
+                        <PageButton label={"Registration"} icon={faHeadphones} ></PageButton>
+                    </span>
                 </div>
             </div>
         </div>

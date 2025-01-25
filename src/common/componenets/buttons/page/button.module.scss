@@ -1,0 +1,64 @@
+@use "../../../../app/styles/variables.scss" as variables;
+@use "../../../../app/styles/borders.scss";
+@use "../../../../app/styles/box.shadows.scss";
+
+
+.container{
+    width: 70%;
+    height: 100%;
+    color: variables.$color-text;
+    align-content: center;
+
+    &_border{
+        padding: 0;
+        height: 70%;
+        width: 100%;
+        @extend %border;
+        @extend %black_shadow;
+        border-top: 1px solid variables.$color-background;
+        border-radius: 20px 20px 20px 20px;
+        
+        background-color: variables.$color-button;
+        overflow:hidden;
+
+        &_hover{
+            display: flex;
+            flex-direction: row;
+            width: 200%;
+            height: 100%;
+            align-items: center;
+        }
+        &_hover:hover{
+            position: relative;
+            transition: all 1s ease-in-out;
+            transform: translateX(-50%);
+        }
+        
+        &_icon{
+            color: variables.$color-text;
+            position: relative;
+            height: 3vh;
+            left:10%;
+        }
+        &_icon_hover{
+            position: relative;
+            color: variables.$color-text;
+            height: 3vh;
+            left:16%;
+        }
+        
+        &_text{
+            font-size: 1rem;
+            color: variables.$color-text;
+            align-content: center;
+            position: relative;
+            height: 100%;
+            width: 50%;
+            background: transparent;
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    
+}
