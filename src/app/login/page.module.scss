@@ -109,7 +109,7 @@
             width: 76%;
             //align-self: center;
             //align-content: center;
-            left:11.8%;
+            left:12.1%;
             height: 54%;
             top:16.8%;
             border: 1px solid #3A5A40;
@@ -120,12 +120,20 @@
             
             background-color: #3A5A40;
             &_grid{
-
                 &_title{
                     align-self: baseline;
                     grid-column: 1/-1;
                     height: 30%;
                     font-size: 3rem;
+                }
+
+                &_btn{
+                    grid-column: 2/-1;
+                    padding: 1%;
+                    width: 90%;
+                    height: 100%;
+                    text-align: center;
+                    justify-items: center;
                 }
             }
         }    
