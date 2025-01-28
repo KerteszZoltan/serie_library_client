@@ -45,3 +45,16 @@
         font-size: 1rem;
     }
 }
+
+@media(max-width: 600px){
+    .container{
+        &_error{
+            font-size: 1rem;
+            position: absolute;
+            top: -40%;
+            height: 100%;
+            width: 120%;
+            left : -10%;
+        }
+    }
+}
