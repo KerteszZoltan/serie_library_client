@@ -2,6 +2,7 @@ import PageButton from "@/common/componenets/buttons/page/button";
 import styles from "./page.module.scss";
 import { faCirclePlay, faHeadphones } from "@fortawesome/free-solid-svg-icons"
 import EmailInput from "@/common/componenets/input/emailInput/emailInput";
+import PasswordInput from "@/common/componenets/input/passwordInput/passwordInput";
 
 export default function LoginPage(){
 
@@ -17,7 +18,9 @@ export default function LoginPage(){
                         <EmailInput placeholder={"Enter your email..."}></EmailInput>
                     </span>
                     <span>Password:</span>
-                    <span>...password...</span>
+                    <span className={styles.page_border_grid_password}>
+                        <PasswordInput placeholder={"password"} ></PasswordInput>
+                    </span>
                     <span className={styles.page_border_grid_btn}>
                         <PageButton label={"Login"} icon={faCirclePlay} ></PageButton>
                     </span>

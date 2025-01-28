@@ -60,6 +60,12 @@
                 overflow: visible;
                 align-content: center;
             }
+            &_password{
+                width: 90%;
+                height: 100%;
+                overflow: visible;
+                align-content: center;
+            }
             
             &_img{
                 background-image: url("/camera.png");
