@@ -6,7 +6,9 @@ export default function Navigation(){
         <div className={`${styles.nav}`}>
             <div className={`${styles.nav_container}`}>
                 <div>Add series</div>
-                <div>Series</div>
+                <Link href="/">
+                    Series
+                </Link>
                 <Link href="/login">
                     Login
                 </Link>

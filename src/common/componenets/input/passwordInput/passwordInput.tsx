@@ -11,7 +11,6 @@ interface PasswordInputProps {
 
 export default function PasswordInput({placeholder}: PasswordInputProps) {
     const { rules , validatePasswordOnChange } = usePasswordStore();
-
     return(
     <div className={styles.container}>
         <input type="password" 

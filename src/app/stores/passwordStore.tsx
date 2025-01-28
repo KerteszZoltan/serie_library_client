@@ -22,7 +22,7 @@ type PasswordRule = {
       { rule: "At least one special character", isValid: false },
     ],
     setPassword: (password: string) =>
-      set({ password }), // Updates password without validation
+      set({ password }),
     validatePasswordOnChange: (password: string) => {
       const minLength = 8;
       const hasUppercase = /[A-Z]/.test(password);

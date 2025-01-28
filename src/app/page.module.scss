@@ -8,17 +8,21 @@
     flex-direction: column;
     overflow: scroll;
     margin: 0;
+    text-align: center;
+    justify-content: center;
+
+    background-image: url("/film_roll.png");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &_error{
+        position: relative;
+        width: 60%;
+        height: 95%;
+        align-self: center;
+    }
 }
 
 @media (max-width:600px){ 
-    .page{
-        position: relative;
-        justify-self: center;
-        width: 100vw;
-        height: 85vh;
-        display: flex;
-        flex-direction: column;
-        overflow: scroll;
-
-    }
 }
