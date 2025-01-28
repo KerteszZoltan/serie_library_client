@@ -3,5 +3,45 @@
 @use "../../../../app/styles/variables.scss" as variables;
 
 .container{
+    position: relative;
     width: 100%;
+    height: 100%;
+    align-content: center;
+
+    &_input{
+        position: relative;
+        width: 90%;
+        height:60%;
+        background-color: variables.$color-button;
+        color: variables.$color-text;
+        @extend %black_shadow;
+        font-size: .8rem;
+        border-radius: 5px;
+        border: 1px solid variables.$color-background;
+        padding-left: 2%;
+    }
+    &_input_error{
+        position: relative;
+        width: 90%;
+        height:60%;
+        background-color: variables.$color-button;
+        color: variables.$color-text;
+        @extend %black_shadow;
+        font-size: .8rem;
+        border-radius: 5px;
+        border: 1px solid red;
+        padding-left: 2%;
+    }
+    ::placeholder{
+        color: variables.$color-text;
+        text-align: center;
+        opacity: .6;
+    }
+    &_error{
+        position: absolute;
+        top: -30%;
+        left: 25%;
+        color: red;
+        font-size: 1rem;
+    }
 }

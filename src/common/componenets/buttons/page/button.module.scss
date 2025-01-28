@@ -38,13 +38,15 @@
             color: variables.$color-text;
             position: relative;
             height: 3vh;
-            left:10%;
+            width: 25%;
+            left:5%;
         }
         &_icon_hover{
             position: relative;
             color: variables.$color-text;
             height: 3vh;
-            left:16%;
+            width: 50%;
+            left:0%;
         }
         
         &_text{
@@ -53,10 +55,11 @@
             align-content: center;
             position: relative;
             height: 100%;
-            width: 50%;
+            width: 25%;
             background: transparent;
             border: 0;
             padding: 0;
+            left: -5%;
         }
     }
 }
@@ -69,13 +72,15 @@
                 color: variables.$color-text;
                 position: relative;
                 height: 3vh;
-                left:8%;
+                left:0%;
+            }
+            &_text{
+                left:-7%;
             }
             &_icon_hover{
                 position: relative;
                 color: variables.$color-text;
                 height: 3vh;
-                left:16%;
             }
         }
     }

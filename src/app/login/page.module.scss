@@ -54,6 +54,12 @@
                 height: 30%;
                 font-size: 4rem;
             }
+            &_email{
+                width: 90%;
+                height: 100%;
+                overflow: visible;
+                align-content: center;
+            }
             
             &_img{
                 background-image: url("/camera.png");
@@ -107,8 +113,6 @@
         &_border{
             position: relative;
             width: 76%;
-            //align-self: center;
-            //align-content: center;
             left:12.1%;
             height: 54%;
             top:16.8%;
