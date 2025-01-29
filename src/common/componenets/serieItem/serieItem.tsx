@@ -10,18 +10,19 @@ export default function SerieItem(
     return (
         <div className={styles.background}>
             <div className={styles.background_container}>
-                <div className={styles.background_container_span_container}>
-                    <span>English title:</span>
-                    <span>{titleEN}</span>
-                    <span>Hungarian title:</span>
-                    <span>{titleHU}</span>
-                    <span>English description:</span>
-                    <span>{descriptionEN}
-                    </span>
-                    <span>Hungarian description:</span>
-                    <span>{descriptionHU}
-                    </span>
-                </div>
+                    <span className={styles.background_container_const_titleEN}>English title:</span>
+                    <span className={styles.background_container_titleEN}>{titleEN}</span>
+                    <span className={styles.background_container_const_titleHU}>Hungarian title:</span>
+                    <span className={styles.background_container_titleHU}>{titleHU}</span>
+                    <div className={styles.background_container_descriptions}>
+                        <span className={styles.background_container_descriptions_const_descriptionEN}>English description:</span>
+                        <span className={styles.background_container_descriptions_description}>{descriptionEN}
+                        </span>
+                        <span  className={styles.background_container_descriptions_const_descriptionHU}>Hungarian description:</span>
+                        <span  className={styles.background_container_descriptions_description}>{descriptionHU}
+                        </span>
+                    </div>
+                    
             </div>
         </div>
     );

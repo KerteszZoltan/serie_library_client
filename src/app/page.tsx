@@ -9,9 +9,11 @@ export default async function Home() {
     const series = await data.json();
     return (
       <div className={styles.page}>
+        <div className={styles.page_conatiner}>
         {series.map((series: { _id: Key | null | undefined; titleEN: string; titleHU: string; descriptionEN: string; descriptionHU: string; }) => (
           <SerieItem key={series._id} titleEN={series.titleEN} titleHU={series.titleHU} descriptionEN={series.descriptionEN} descriptionHU={series.descriptionHU} />
         ))}
+        </div>
       </div>
     );
   }

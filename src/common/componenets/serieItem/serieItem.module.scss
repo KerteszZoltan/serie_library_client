@@ -1,91 +1,81 @@
 .background{
-    height: 45%;
+    height: 45vh;
+    width: 100%;
     position: relative;
-    background-image: url("/moovie.png");
-    background-size: 100% 200%;
+    background-image: url("/folder.png");
+    background-size: 100% 135%;
     background-repeat: no-repeat;
     background-position: center;
-    width: 80%;
-    align-content: center;
 
     &_container{
-        align-content: center;
-        width: 70vw;
         position: relative;
-        position: relative;
-        justify-items: center;
-        justify-self: center;
+        top:19%;
+        width: 90%;
         height: 80%;
-        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
 
+        &_const_titleEN{
+            font-size: 1.5rem;
+            width: 30%;
+            position: relative;
+            text-align: center;
+            top:-19%;
+            left:9%;
+        }
 
-        &_span_container{
-            place-content: center;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            width: 70vw;
-            inline-size: 60vw;
+        &_titleEN{
+            font-size: 1.5rem;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            top:-18.2%;
             overflow-wrap: break-word;
+        }
 
-            & > span{
-                width: 30vw;
-                text-align: right;
-                padding: 1%;
+        &_const_titleHU{
+            width: 30%;
+            position: relative;
+            text-align: center;
+            top:-14%;
+            left:-4%;
+            font-size: 1.5rem;
+        }
+        &_titleHU{
+            width: 80%;
+            position: relative;
+            align-content: center;
+            top:-22.8%;
+            left:23%;
+            font-size: 1.5rem;
+        }
+
+        &_descriptions{
+            position: relative;
+            font-size: 1rem;
+            top:-10%;
+            display: flex;
+            flex-direction: row;
+            height: 70%;
+
+
+            &_const_descriptionEN{
+                width: 22%;
+                font-size: 1.5rem;
             }
-    
-            & > span:nth-child(2n){
-                text-align: left;
+
+            &_description{
+                width: 40%;
+                font-size: 1rem;
+                overflow: scroll;
+            }
+
+            &_const_descriptionHU{
+                width: 22%;
+                font-size: 1.5rem;
             }
 
         }
-
-    }
-
-}
-
-@media (max-width:600px){ 
-    .background{
-    height: 30%;
-    position: relative;
-    background-image: url("/moovie.png");
-    background-size: 100% 200%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
-    align-content: center;
-
-        &_container{
-            align-items: center;
-            width: 70vw;
-            position: relative;
-            position: relative;
-            justify-items: center;
-            justify-self: center;
-            height: 80%;
-            overflow: scroll;
-            overflow-x: hidden;
-
-            &_span_container{
-                place-content: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-
-
-                & > span{
-                    text-align: center;
-                    padding-top: 1rem;
-                    inline-size: 60vw;
-                    overflow-wrap: break-word;
-                }
-            
-                & > span:nth-child(2n){
-                    text-align: center;
-                    padding-top: 0;
-                }
-            }
-        }
     }
 }
-    

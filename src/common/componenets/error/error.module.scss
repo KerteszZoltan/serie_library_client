@@ -16,8 +16,9 @@
     }
     &_error{
         position: relative;
-        top:62.5%;
+        top:61.5%;
         font-size: 3.5rem;
+        left:1.5%;
 
         letter-spacing: 1.3rem;
     }
@@ -30,4 +31,32 @@
         font-weight: 800;
         font-size: 5rem;
     }
+}
+
+@media (max-width:600px) {
+    .background{
+        &_message{
+            position: relative;
+            top:43.5%;
+            font-size: 1rem;
+        }
+        &_error{
+            position: relative;
+            top:65.3%;
+            font-size: 2.5rem;
+            left:4.5%;
+            letter-spacing: 1.3rem;
+        }
+    
+        &_404{
+            position: relative;
+            top: 67%;
+            left:3.2%;
+    
+            letter-spacing: 1rem;
+            font-weight: 800;
+            font-size: 3rem;
+        }
+    }
+    
 }
