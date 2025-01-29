@@ -1,0 +1,28 @@
+@use "../../../../app/styles/variables.scss" as variables;
+@use "../../../../app/styles/borders.scss";
+
+.container{
+    width: 19.6vw;
+    height: 90%;
+    background: transparent;
+    color: variables.$color-text;
+    text-align: center;
+    align-content: center;
+
+    @extend %border;
+    border-radius: 10px;
+
+    background-color: variables.$color-lighter-background-modified-opacity;
+
+    &_button{
+        background: transparent;
+        border: none;
+        color: variables.$color-text;
+    }
+}
+
+@media (max-width:600px) {
+    .container{
+        width: 22.6vw;
+    }
+}
