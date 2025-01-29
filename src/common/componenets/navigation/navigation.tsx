@@ -8,7 +8,7 @@ export default function Navigation(){
                 <NavigationButton text="Add Series" route=""/>
                 <NavigationButton text="Series" route="/" />
                 <NavigationButton text="Login" route="/login" />
-                <NavigationButton text="Registration" route=""/>
+                <NavigationButton text="Registration" route="/registration"/>
             </div>
         </div>
 
