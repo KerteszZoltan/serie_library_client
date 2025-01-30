@@ -18,12 +18,6 @@ export default function PasswordInput({placeholder}: PasswordInputProps) {
         placeholder={placeholder}
         onChange={(e) => { validatePasswordOnChange(e.target.value)}}>
         </input>
-        {rules && <span className={styles.container_error}>{
-        rules.map((rule,index)=>!rule.isValid && (
-            <li key={index} className="text-red-500">
-              {rule.rule}
-            </li>)) 
-        }</span>}
     </div>
     );
 }

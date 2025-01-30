@@ -1,3 +1,5 @@
+"use client";
+
 import EmailInput from "@/common/componenets/input/emailInput/emailInput";
 import styles from "./page.module.scss";
 import PasswordInput from "@/common/componenets/input/passwordInput/passwordInput";

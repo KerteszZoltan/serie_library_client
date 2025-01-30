@@ -1,0 +1,19 @@
+.page{
+    height: 84.8vh;
+    background-image: url("/film_roll.png");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
+
+    &_background{
+        justify-self: center;
+        width: 80%;
+        height: 80%;
+        background-image: url("/folder.png");
+        background-size: 100% 130%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+}

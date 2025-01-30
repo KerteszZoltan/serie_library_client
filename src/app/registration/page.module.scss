@@ -59,6 +59,15 @@
                 justify-self: center;
                 padding-top: 1%;
 
+                &_error{
+                    width: 60%;
+                    text-align: start;
+                    position: absolute;
+                    left: 5%;
+                    inline-size: 30%;
+                    overflow-wrap: break-word;
+                }
+
                 &_text{
                     text-align: end;
                     width: 100%;
