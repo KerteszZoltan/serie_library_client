@@ -1,0 +1,98 @@
+@use "../../app/styles/variables.scss" as variables;
+
+.page{
+    background-image: url("/film_roll.png");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 84.6vh;
+    width: 100%;
+    align-content: center;
+    justify-items: center;
+
+    &_background_image{
+        height: 90%;
+        width: 60%;
+        border-radius: 20px;
+        background-image: url("/clap.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        justify-items: center;
+        align-content: end;
+    }
+    &_background_color{
+        background: variables.$color-lighter-background;
+        height:59%;
+        width: 95%;
+        position: relative;
+        top:-1.7%;
+        left:.5%;
+        border-radius: 0px 0px 10px 10px;
+
+        &_container{
+            height: 100%;
+
+            &_image{
+                position: absolute;
+                left: 1%;
+                width: 20%;
+                height: 100%;
+                background-image: url("/camera_man.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &_title{
+                padding-top: 2%;
+                font-size: 2rem;
+                text-align: center;
+            }
+            &_form{
+                width: 100%;
+                height: 18%;
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                align-items: center;
+                justify-self: center;
+                padding-top: 1%;
+
+                &_text{
+                    text-align: end;
+                    width: 100%;
+                    font-size: 1.2rem;
+                }
+            }
+            &_button{
+                position: relative;
+                padding-top: 1%;
+                width: 50%;
+                height: 20%;
+                justify-self: end;
+                justify-items: center;
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .page{
+        &_background_image{
+            //background: variables.$color-lighter-background;
+            height: 90%;
+            width: 80%;
+            border-radius: 20px;
+        }
+        &_background_color{
+            background: variables.$color-lighter-background;
+            height:59%;
+            width: 95%;
+            position: relative;
+            top:-1.7%;
+            left:.5%;
+            border-radius: 0px 0px 10px 10px;
+        }    
+    }
+}
