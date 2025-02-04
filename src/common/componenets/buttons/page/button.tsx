@@ -5,13 +5,15 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 interface IButtonProps{
     label : string;
     icon : IconDefinition;
-    onClick?:()=>void;
+    onClick:()=>void;
 }
 
-export default function PageButton({label,icon}:IButtonProps){
+export default function PageButton({label,icon,onClick}:IButtonProps){
     return (
         <div className={styles.container}>
-            <button className={styles.container_border}>
+            <button className={styles.container_border}
+            onClick={onClick}
+            >
                 <div className={styles.container_border_hover}>
                     <FontAwesomeIcon icon={icon} className={styles.container_border_icon} />
                     <div className={styles.container_border_text}>{label}</div>

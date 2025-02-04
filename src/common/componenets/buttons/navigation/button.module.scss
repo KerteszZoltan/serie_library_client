@@ -23,6 +23,7 @@
 
     &_active{
         background: variables.$color-lighter-background;
+        pointer-events: none;
     }
 }
 
