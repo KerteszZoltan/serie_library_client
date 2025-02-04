@@ -7,28 +7,31 @@ import EmailInput from "@/common/componenets/input/emailInput/emailInput";
 import PasswordInput from "@/common/componenets/input/passwordInput/passwordInput";
 import useEmailStore from "../stores/emailStore";
 import usePasswordStore from "../stores/passwordStore";
-import useCookieStore from "../stores/storeCookie";
 import { redirect } from 'next/navigation'
-
-
+import useNavigationStore from "../stores/navStore";
+import { getToken, saveToken } from "../stores/tokenStore";
 
 
 export default function LoginPage(){
 
     const {email} = useEmailStore();
     const {password} = usePasswordStore();
-    const {setCookie} = useCookieStore();
-    
+    const {setActive} = useNavigationStore();
+
     const handleLogin = async ()=>{
         const res = await fetch("http://localhost:8000/login", {
             method: "POST", 
             headers: {"Content-Type": "application/json"},
             body:JSON.stringify({email, password}),
         })
-        setCookie(await res.json());
-        if (res.ok) {
+        if (res.status === 200) {
+            saveToken(await res.json());
+            console.log(getToken());
+            await setActive("/");
             redirect("/");
         }
+
+
     };
     
 
