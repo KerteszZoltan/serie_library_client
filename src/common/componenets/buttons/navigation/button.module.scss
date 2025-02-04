@@ -1,10 +1,11 @@
+
+
 @use "../../../../app/styles/variables.scss" as variables;
 @use "../../../../app/styles/borders.scss";
 
 .container{
     width: 19.6vw;
     height: 90%;
-    background: transparent;
     color: variables.$color-text;
     text-align: center;
     align-content: center;
@@ -18,6 +19,10 @@
         background: transparent;
         border: none;
         color: variables.$color-text;
+    }
+
+    &_active{
+        background: variables.$color-lighter-background;
     }
 }
 

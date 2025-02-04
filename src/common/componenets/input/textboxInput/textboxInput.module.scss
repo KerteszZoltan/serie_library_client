@@ -1,0 +1,14 @@
+@use '../../../../app/styles/variables.scss' as variables;
+@use '../../../../app/styles/box.shadows.scss';
+.textbox {
+    width: 98%;
+    position: relative;
+    background-color: variables.$color-button;
+    color: variables.$color-text;
+    @extend %black_shadow;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid variables.$color-background;
+    padding-left: 1%;
+    height: 100%;
+}
