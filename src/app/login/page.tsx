@@ -12,11 +12,17 @@ import useNavigationStore from "../stores/navStore";
 import { getToken, saveToken } from "../stores/tokenStore";
 
 
+
 export default function LoginPage(){
 
     const {email} = useEmailStore();
     const {password} = usePasswordStore();
     const {setActive} = useNavigationStore();
+
+    const goToRegistration = ()=>{
+        setActive("/registration");
+        redirect("/registration");
+    }
 
     const handleLogin = async ()=>{
         const res = await fetch("http://localhost:8000/login", {
@@ -27,7 +33,7 @@ export default function LoginPage(){
         if (res.status === 200) {
             saveToken(await res.json());
             console.log(getToken());
-            await setActive("/");
+            setActive("/");
             redirect("/");
         }
 
@@ -55,7 +61,7 @@ export default function LoginPage(){
                     </span>
                     <span className={styles.page_border_grid_line}>-------or-----</span>
                     <span className={styles.page_border_grid_btn}>
-                        <PageButton label={"Registration"} icon={faHeadphones} onClick={()=>{}} ></PageButton>
+                        <PageButton label={"Registration"} icon={faHeadphones} onClick={goToRegistration} ></PageButton>
                     </span>
                 </div>
             </div>

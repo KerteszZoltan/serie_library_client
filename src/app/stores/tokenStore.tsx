@@ -1,5 +1,6 @@
 import Cookies from "js-cookie";
 
+
 const saveToken = (token: string) => {
   Cookies.set("token", token, { expires: 1, secure: true, sameSite: "strict" });
 };
