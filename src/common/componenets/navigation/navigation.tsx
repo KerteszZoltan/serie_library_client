@@ -2,26 +2,29 @@
 import { getToken } from "@/app/stores/tokenStore";
 import NavigationButton from "../buttons/navigation/button";
 import styles from "./navigation.module.scss";
+import { useEffect } from "react";
 
-function isActiveToken(){
-    if (getToken() != undefined) {
-        console.log(getToken());
-        return true;
-    }else{
-        console.log(getToken());
-        return false;
-    }
-}
 
 export default function Navigation(){
+
+    let token;
+
+    useEffect(()=>{
+        if (getToken() != undefined) {
+            token = getToken();
+        }else{
+            token = undefined;
+        }
+    })
+    
     return (
         <div className={`${styles.nav}`}>
             <div className={`${styles.nav_container}`}>
                 <NavigationButton text="Add Series" route="/addSerie" onClick={()=>{}}/>
                 <NavigationButton text="Series" route="/"/>
-                { !isActiveToken() ? <NavigationButton text="Login" route="/login"/> : ""}
-                { !isActiveToken() ? <NavigationButton text="Registration" route="/registration"/> : ""}
-                { isActiveToken() ? <NavigationButton text="Logout" route=""/>: ""}
+                { token !=undefined ? <NavigationButton text="Login" route="/login"/> : null}
+                { token !=undefined ? <NavigationButton text="Registration" route="/registration"/> : null}
+                { token !=undefined ? null: <NavigationButton text="Logout" route=""/>}
 
             </div>
         </div>
