@@ -1,16 +1,13 @@
-import Cookies from "js-cookie";
+import { create } from "zustand";
 
+type TokenState = {
+    token: string | undefined;
+    setToken:(token: string | undefined)=>void;
+}
 
-const saveToken = (token: string) => {
-  Cookies.set("token", token, { expires: 1, secure: true, sameSite: "strict" });
-};
+const useTokenState = create<TokenState>((set)=>({
+    token:"",
+    setToken:(token)=>set({token})
+}))
 
-const getToken = () => {
-  return Cookies.get("token");
-};
-
-const removeToken = () => {
-  Cookies.remove("token");
-};
-
-export { saveToken, getToken, removeToken };
+export default useTokenState;

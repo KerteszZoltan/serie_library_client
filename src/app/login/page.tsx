@@ -9,7 +9,7 @@ import useEmailStore from "../stores/emailStore";
 import usePasswordStore from "../stores/passwordStore";
 import { redirect } from 'next/navigation'
 import useNavigationStore from "../stores/navStore";
-import { getToken, saveToken } from "../stores/tokenStore";
+import { saveToken } from "../stores/tokenCookie";
 
 
 
@@ -32,12 +32,9 @@ export default function LoginPage(){
         })
         if (res.status === 200) {
             saveToken(await res.json());
-            console.log(getToken());
             setActive("/");
             redirect("/");
         }
-
-
     };
     
 
