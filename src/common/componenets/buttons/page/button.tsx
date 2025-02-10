@@ -5,7 +5,7 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 interface IButtonProps{
     label : string;
     icon : IconDefinition;
-    onClick:()=>void;
+    onClick?:()=>void;
 }
 
 export default function PageButton({label,icon,onClick}:IButtonProps){

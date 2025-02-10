@@ -9,11 +9,19 @@ import useEmailStore from "../stores/emailStore";
 import usePasswordStore from "../stores/passwordStore";
 import { redirect } from 'next/navigation'
 import useNavigationStore from "../stores/navStore";
-import { saveToken } from "../stores/tokenCookie";
+import { getToken, saveToken } from "../stores/tokenCookie";
+import useTokenState from "../stores/tokenStore";
+import { useEffect } from "react";
 
 
 
 export default function LoginPage(){
+    const {setToken} = useTokenState();
+
+    useEffect(()=>{
+        const storedToken = getToken();
+        setToken(storedToken || undefined)
+    },[setToken]);
 
     const {email} = useEmailStore();
     const {password} = usePasswordStore();
@@ -28,12 +36,16 @@ export default function LoginPage(){
         const res = await fetch("http://localhost:8000/login", {
             method: "POST", 
             headers: {"Content-Type": "application/json"},
-            body:JSON.stringify({email, password}),
+            body:JSON.stringify({email, password})
         })
         if (res.status === 200) {
-            saveToken(await res.json());
+            const responseJson = await res.json();
+            
+            saveToken(responseJson);
+            console.log(getToken());
             setActive("/");
             redirect("/");
+            
         }
     };
     
