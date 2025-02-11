@@ -11,6 +11,8 @@ import useEmailStore from "../stores/emailStore";
 import usePasswordStore from "../stores/passwordStore";
 import { redirect } from "next/navigation";
 import useNavigationStore from "../stores/navStore";
+import { getToken } from "../stores/tokenCookie";
+import { useEffect } from "react";
 
 export default function RegistrationPage(){
 
@@ -18,6 +20,14 @@ export default function RegistrationPage(){
     const {email, error} = useEmailStore();
     const {password, rules} = usePasswordStore();
     const {setActive} = useNavigationStore();
+
+    const isAuthenticated=getToken();
+    
+        useEffect(()=>{
+            if (isAuthenticated !== undefined) {
+                redirect("/")
+            }
+        })
 
 
     const handleRegistration = async()=>{

@@ -7,11 +7,22 @@ import TextboxInput from '@/common/componenets/input/textboxInput/textboxInput';
 import { useSerieState } from '../stores/serieStore';
 import useNavigationStore from '../stores/navStore';
 import { redirect } from 'next/navigation';
+import { getToken } from '../stores/tokenCookie';
+import { useEffect } from 'react';
 
 
 export default function AddSeriePage() {
     const {titleEN, titleHU, descriptionEN, descriptionHU, setTitleEn, setTitleHu, setDescriptionEn, setDescriptionHu,reset} = useSerieState();
     const {setActive} = useNavigationStore();
+    const isAuthenticated=getToken();
+
+    useEffect(()=>{
+        if (isAuthenticated === undefined) {
+            redirect("/")
+        }
+    })
+
+
 
 
     const handlAddSerie = async ()=>{

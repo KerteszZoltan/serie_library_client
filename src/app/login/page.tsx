@@ -10,18 +10,21 @@ import usePasswordStore from "../stores/passwordStore";
 import { redirect } from 'next/navigation'
 import useNavigationStore from "../stores/navStore";
 import { getToken, saveToken } from "../stores/tokenCookie";
-import useTokenState from "../stores/tokenStore";
 import { useEffect } from "react";
 
 
 
-export default function LoginPage(){
-    const {setToken} = useTokenState();
 
-    useEffect(()=>{
-        const storedToken = getToken();
-        setToken(storedToken || undefined)
-    },[setToken]);
+export default function LoginPage(){
+
+    const isAuthenticated=getToken();
+    
+        useEffect(()=>{
+            if (isAuthenticated !== undefined) {
+                redirect("/")
+            }
+        })
+    
 
     const {email} = useEmailStore();
     const {password} = usePasswordStore();

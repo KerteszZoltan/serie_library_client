@@ -1,12 +1,20 @@
 "use client"
+import { useEffect } from "react";
 import NavigationButton from "../buttons/navigation/button";
 import styles from "./navigation.module.scss";
 import useTokenState from "@/app/stores/tokenStore";
+import { getToken } from "@/app/stores/tokenCookie";
 
 
 export default function Navigation(){
 
     const {token} = useTokenState();
+    const {setToken} = useTokenState();
+
+    useEffect(()=>{
+        const storedToken = getToken();
+        setToken(storedToken || undefined)
+    },[setToken]);
     
     return (
         <div className={`${styles.nav}`}>
